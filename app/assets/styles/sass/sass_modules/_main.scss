@@ -1,0 +1,53 @@
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+
+/* Responsive font */
+$font-sizes: (
+  null  : 50px,
+  780px : 35px,
+  530px : 20px
+);
+
+@mixin font-size($fs-map) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      font-size: $fs-font-size;
+    }
+    @else {
+      @media screen and (max-width: $fs-breakpoint) {
+        font-size: $fs-font-size;
+      }
+    }
+  }
+}
+
+.container {
+	height: 100%;
+	@include display(flex);
+	@include justify-content(center);
+	background-image:url(/assets/img/background.jpg);
+	background-size: cover;
+	font-family: 'Lobster', sans-serif;
+	@include font-size($font-sizes);
+	color: #2c3e50;
+}
+
+.baseline {
+	margin-top: 25px;
+	text-align: center;
+
+	a{
+    	text-decoration: none;
+    	color: inherit;
+
+    	&:hover{
+    		color: white;
+    	}
+	}
+}
+
+.devicon-github-original-wordmark.colored, 
+.devicon-github-original.colored, 
+.devicon-github-plain-wordmark.colored, 
+.devicon-github-plain.colored {
+  color: inherit;
+}
