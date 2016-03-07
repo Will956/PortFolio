@@ -1,17 +1,15 @@
-# Portfolio
-
-## Requirements
+# Requirements
 * NodeJS & NPM
 * Gulp
 
-## How to use it
+# How to use it
 
 Install dependencies
 ```sh
 $ npm install
 ```
 
-### Gulp tasks
+# Gulp tasks
 
 Start the dev server with LiveReload and compile sass files to css
 ```sh
